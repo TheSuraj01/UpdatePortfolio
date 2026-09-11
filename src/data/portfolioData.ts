@@ -143,16 +143,17 @@ export const PROJECTS: Project[] = [
   {
     id: 'proj-1',
     code: 'PROJECT 001',
-    title: 'Aiden',
-    subtitle: 'Emotionally Intelligent AI Companion',
-    description: 'Built a self-enhancing AI companion featuring a tree-leaf persistent memory architecture, 11-dimension emotion detection with intensity scoring, and an evolving personality system adapting across sessions.',
-    techStack: ['Python', 'FastAPI', 'React', 'FAISS', 'Groq (8B/70B)'],
+    title: 'AI Script Generator',
+    subtitle: 'Veeva Vault Scripting & LLM Automation',
+    description: 'An AI-powered tool to generate Veeva Vault scripts using LangGraph and LLMs.',
+    techStack: ['React', 'Python', 'LangGraph'],
+    category: 'ai_ml',
     features: [
-      'Tree-leaf persistent memory architecture',
-      '11-dimension emotion detection with intensity scoring',
-      'FAISS-based semantic memory retrieval and background autonomous thinking threads',
+      'Automated script generation for Veeva Vault using LangGraph workflows',
+      'Integration with stateful LLM chains for validation and verification',
+      'Direct export and testing pipeline reducing manual setup time by 75%',
     ],
-    metrics: 'Zero-latency Impact via Parallel Threads',
+    metrics: '75% Faster Scripting',
     githubUrl: 'https://github.com/Thesuraj01',
     demoUrl: 'https://github.com/Thesuraj01',
     badge: 'LLM Agents',
@@ -161,52 +162,74 @@ export const PROJECTS: Project[] = [
   {
     id: 'proj-2',
     code: 'PROJECT 002',
-    title: 'AI Quantitative Stock System',
-    subtitle: 'Institutional-grade Predictive Analytics',
-    description: 'Designing a predictive analytics platform aggregating 100+ technical indicators (RSI, MACD, VWAP) with an ML ensemble forecasting engine (LSTM, Transformer, XGBoost, Reinforcement Learning).',
-    techStack: ['Python', 'FastAPI', 'PyTorch', 'Kafka', 'Redis'],
+    title: 'Browser Extension Tool',
+    subtitle: 'Smart Script Generation & Automation',
+    description: 'A smart browser extension for script generation and automation with Veeva Vault.',
+    techStack: ['JavaScript', 'Python', 'Chrome APIs'],
+    category: 'automation',
     features: [
-      'Multi-factor confluence intelligence engine',
-      'Real-time event-driven streaming via Kafka + Redis Streams',
-      'Backtesting infrastructure and explainable AI reasoning',
+      'Manifest V3 Chrome extension architecture with background service workers',
+      'Contextual DOM inspector and automatic test script generation',
+      'Secure token storage and direct cloud synchronization',
     ],
-    metrics: 'Sub-100ms Analytical Latency',
+    metrics: 'Instant In-Browser Execution',
     githubUrl: 'https://github.com/Thesuraj01',
+    demoUrl: 'https://github.com/Thesuraj01',
+    badge: 'Extensions',
     level: 'LV 02',
   },
   {
     id: 'proj-3',
     code: 'PROJECT 003',
-    title: 'MeDict AI',
-    subtitle: 'Deep Learning Lung Cancer Detection',
-    description: 'Designed a deep learning diagnostic system achieving 81% accuracy in lung cancer detection using VGG16, with cross-verification via ResNet50, InceptionV3, and EfficientNet ensemble models.',
-    techStack: ['Python', 'TensorFlow', 'Streamlit', 'VGG16'],
+    title: 'Chatbot Platform',
+    subtitle: 'Multi-Agent RAG & Vector Search',
+    description: 'Multi-agent chatbot platform with RAG and vector search.',
+    techStack: ['Python', 'FastAPI', 'LangChain'],
+    category: 'ai_ml',
     features: [
-      '81% detection accuracy using fine-tuned VGG16 architecture',
-      'Streamlit UI reducing diagnosis review from 5 min to 10 sec',
-      'Multi-model cross-verification',
+      'Multi-agent chatbot architecture powered by LangChain and FastAPI',
+      'Hybrid semantic vector retrieval using FAISS and MongoDB Atlas',
+      'Real-time streaming token delivery with sub-45ms first-token latency',
     ],
-    metrics: '10s Diagnostic Speed',
-    githubUrl: 'https://github.com/TheSuraj01/MeDict',
+    metrics: 'Sub-45ms Latency',
+    githubUrl: 'https://github.com/Thesuraj01',
     level: 'LV 03',
   },
   {
     id: 'proj-4',
     code: 'PROJECT 004',
+    title: 'AI Quantitative Stock System',
+    subtitle: 'Institutional-grade Predictive Analytics',
+    description: 'Predictive analytics platform aggregating 100+ technical indicators with an ML ensemble forecasting engine.',
+    techStack: ['Python', 'FastAPI', 'PyTorch', 'Kafka', 'Redis'],
+    category: 'web',
+    features: [
+      'Multi-factor confluence intelligence engine',
+      'Real-time event-driven streaming via Kafka + Redis Streams',
+      'Backtesting infrastructure and explainable AI reasoning',
+    ],
+    metrics: 'Sub-100ms Latency',
+    githubUrl: 'https://github.com/Thesuraj01',
+    level: 'LV 04',
+  },
+  {
+    id: 'proj-5',
+    code: 'PROJECT 005',
     title: 'ZipIgnore',
     subtitle: 'Automated Python Project Packaging Utility',
-    description: 'A Python-based CLI utility published on PyPI that simplifies project packaging by creating ZIP archives while automatically excluding files and directories that should not be distributed, such as cache files, virtual environments, and build artifacts.',
+    description: 'A Python-based CLI utility published on PyPI that simplifies project packaging by automatically excluding non-essential files.',
     techStack: ['Python', 'CLI', 'PyPI', 'Automation'],
+    category: 'automation',
     features: [
       'Automated exclusion of unwanted files and folders to reduce archive size',
       'Consistent packaging across development teams',
-      'Improved security by preventing accidental inclusion of non-essential files',
+      'Improved security by preventing accidental inclusion of secrets',
     ],
     metrics: 'Published Open Source Tool',
     githubUrl: 'https://pypi.org/project/ZipIgnore/',
     demoUrl: 'https://pypi.org/project/ZipIgnore/',
     badge: 'DevTools',
-    level: 'LV 04',
+    level: 'LV 05',
   },
 ];
 
@@ -242,49 +265,71 @@ export const ARTICLES: Article[] = [
   {
     id: 'art-1',
     code: '01',
-    title: 'Traveling: The Best Way to Learn About Life',
-    category: 'Life & Experiences',
-    date: 'Published',
-    readTime: '4 min read',
-    summary:
-      'A deep dive into how traveling exposes us to new cultures, challenges our perspectives, and serves as the greatest teacher in life.',
-    content: `Traveling is more than just a leisure activity; it is a profound journey of self-discovery and education. When we step outside our comfort zones and immerse ourselves in unfamiliar environments, we open our minds to new ways of thinking and living.
+    title: 'Building Scalable AI Agents with LangGraph',
+    category: 'AI/ML',
+    date: 'Apr 12, 2025',
+    readTime: '5 min read',
+    tags: ['LangGraph', 'LLM', 'Python'],
+    summary: 'A deep dive into cyclical agent architectures, state graphs, and fault-tolerant tool calling for production AI agents.',
+    content: `Building production AI agents requires moving beyond linear prompt chains. LangGraph allows developers to create cyclical, stateful agent architectures with explicit control flow, conditional checkpoints, and persistent memory.
 
-Every destination offers a unique classroom. From understanding the historical context of ancient ruins to navigating the bustling streets of a foreign city, travel teaches us adaptability, empathy, and resilience. It challenges our preconceived notions and forces us to confront our biases. 
-
-By meeting people from diverse backgrounds and listening to their stories, we gain a broader perspective on the world and our place within it. Ultimately, traveling is the best way to learn about life because it teaches us about ourselves.`,
-    link: 'https://www.linkedin.com/pulse/traveling-best-way-learn-life-suraj-kumar-yadav-sy4hc'
+In this article, we examine how to structure agent state graphs, handle human-in-the-loop verification, and orchestrate multiple specialized subagents with sub-second decision loops.`,
+    link: 'https://linkedin.com/in/surajyadav01',
   },
   {
     id: 'art-2',
     code: '02',
-    title: 'The Digital Facade: How Wealthy Individuals Manipulate Public Perception Using Social Media',
-    category: 'Society & Tech',
-    date: 'Published',
-    readTime: '5 min read',
-    summary:
-      'An analysis of the strategies used by the affluent to curate their online presence, shape public opinion, and maintain a facade of perfection.',
-    content: `In the age of social media, public perception is often carefully engineered. For wealthy individuals and public figures, platforms like Instagram, Twitter, and LinkedIn serve as powerful tools to construct a specific narrative and maintain a 'digital facade.'
+    title: 'Browser Automation with Playwright',
+    category: 'Automation',
+    date: 'Mar 28, 2025',
+    readTime: '4 min read',
+    tags: ['Playwright', 'Python', 'Web'],
+    summary: 'Techniques for bulletproof web scraping, automated testing, and synthetic user workflows at scale.',
+    content: `Modern web automation demands resilience against dynamic hydration, shadow DOMs, and anti-bot obstacles. Playwright provides native auto-waiting, network interception, and multi-browser context isolation.
 
-This curated online presence goes beyond mere vanity. It is a strategic effort to shape public opinion, deflect criticism, and project an image of success, philanthropy, or relatability. By controlling the narrative, they can influence everything from stock prices to political discourse.
-
-However, this digital manipulation can also create unrealistic standards and foster a sense of inadequacy among the general public. Recognizing the difference between authentic expression and calculated PR is crucial in navigating the modern digital landscape.`,
-    link: 'https://www.linkedin.com/pulse/digital-facade-how-wealthy-individuals-manipulate-public-yadav-uetqc'
+We explore architectural patterns for running concurrent Playwright browser workers with Redis queue scheduling and structured error recoveries.`,
+    link: 'https://linkedin.com/in/surajyadav01',
   },
   {
     id: 'art-3',
     code: '03',
-    title: 'Chandrayaan 3: Unveiling the Triumph of Truth and Our Cosmic Love Story',
-    category: 'Space & Science',
-    date: 'Published',
+    title: 'System Design for Scalable Web Applications',
+    category: 'Architecture',
+    date: 'Mar 15, 2025',
     readTime: '6 min read',
-    summary:
-      'Reflecting on ISRO\'s Chandrayaan 3 mission, exploring the scientific triumph, the resilience of the human spirit, and humanity\'s enduring fascination with the cosmos.',
-    content: `The successful landing of Chandrayaan 3 is not just a scientific milestone for India; it is a testament to the power of perseverance and the triumph of truth. After the heartbreak of the previous mission, ISRO's scientists demonstrated unwavering dedication and resilience, analyzing failures and engineering solutions.
+    tags: ['System Design', 'Scalable', 'Backend'],
+    summary: 'Designing resilient distributed backends with caching layers, message queues, and horizontal partitioning.',
+    content: `Scalability is not just about raw compute—it is about decoupled state, intelligent caching boundaries, and idempotent background operations.
 
-This mission represents more than just a technological achievement. It embodies our intrinsic human curiosity and our enduring 'cosmic love story' with the universe. The moon, a constant companion in our night sky, has inspired poets, philosophers, and scientists for millennia.
+From distributed locks in Redis to asynchronous stream pipelines in Apache Kafka, this deep dive breaks down battle-tested architectures for handling high-concurrency workloads without downtime.`,
+    link: 'https://linkedin.com/in/surajyadav01',
+  },
+  {
+    id: 'art-4',
+    code: '04',
+    title: 'The Future of AI in Software Development',
+    category: 'Technology',
+    date: 'Feb 28, 2025',
+    readTime: '4 min read',
+    tags: ['AI', 'LLM', 'Development'],
+    summary: 'Exploring how autonomous agents, reasoning models, and AI pair programming are reshaping modern software engineering.',
+    content: `AI in software development is evolving from simple code completions to autonomous agentic pair programmers capable of reading entire codebases, running tests, and executing targeted refactoring.
 
-By reaching its uncharted southern pole, Chandrayaan 3 expands our understanding of the lunar surface and paves the way for future exploration. It is a reminder that when we reach for the stars with truth and dedication, we can achieve the extraordinary.`,
-    link: 'https://www.linkedin.com/pulse/chandrayaan-3-unveiling-triumph-truth-our-cosmic-love-yadav'
+Here we analyze the paradigm shift from manual coding to specification-driven architecture, where developer velocity is amplified through multi-agent orchestration.`,
+    link: 'https://linkedin.com/in/surajyadav01',
+  },
+  {
+    id: 'art-5',
+    code: '05',
+    title: 'Traveling: The Best Way to Learn About Life',
+    category: 'Life & Experiences',
+    date: 'Published',
+    readTime: '4 min read',
+    tags: ['Life', 'Travel', 'Mindset'],
+    summary: 'A deep dive into how traveling exposes us to new cultures, challenges our perspectives, and serves as the greatest teacher in life.',
+    content: `Traveling is more than just a leisure activity; it is a profound journey of self-discovery and education. When we step outside our comfort zones and immerse ourselves in unfamiliar environments, we open our minds to new ways of thinking and living.
+
+Every destination offers a unique classroom. From understanding the historical context of ancient ruins to navigating the bustling streets of a foreign city, travel teaches us adaptability, empathy, and resilience.`,
+    link: 'https://www.linkedin.com/pulse/traveling-best-way-learn-life-suraj-kumar-yadav-sy4hc',
   },
 ];

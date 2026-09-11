@@ -95,27 +95,36 @@
 }
 
 .dark body {
-  background-color: #0A0A0F;
-  color: #E0E6ED;
+  background-color: #040D1A;
+  color: #E2F1FF;
 }
 
 .dark .bg-tech-grid {
-  background-color: #0A0A0F;
+  background-color: #040D1A;
   background-image: 
-    linear-gradient(to right, rgba(110, 181, 247, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(110, 181, 247, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 229, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.045) 1px, transparent 1px);
 }
 
 .dark .bg-blueprint-lines {
-  background-image: radial-gradient(rgba(110, 181, 247, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 229, 255, 0.09) 1px, transparent 1px);
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #151520;
+  background: #061527;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #2B3040;
+  background: #13355A;
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #00E5FF;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

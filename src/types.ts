@@ -11,7 +11,7 @@ export interface TechStackItem {
 
 export interface Project {
   id: string;
-  code: string; // e.g. "PROJECT 001"
+  code: string;
   title: string;
   subtitle: string;
   description: string;
@@ -22,11 +22,12 @@ export interface Project {
   demoUrl?: string;
   badge?: string;
   level: string;
+  category?: 'web' | 'ai_ml' | 'automation';
 }
 
 export interface Article {
   id: string;
-  code: string; // e.g. "01"
+  code: string;
   title: string;
   category: string;
   date: string;
@@ -34,6 +35,7 @@ export interface Article {
   summary: string;
   content: string;
   link?: string;
+  tags?: string[];
 }
 
 export interface JourneyMetric {
