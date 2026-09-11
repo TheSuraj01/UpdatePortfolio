@@ -44,7 +44,7 @@ About Suraj Kumar Yadav:
   - Languages: Python, JavaScript (ES6+), TypeScript, Java, C, C++, SQL
   - Frontend: React.js, Vue.js 3, Next.js, Vite, TailwindCSS, HTML5, CSS3, Three.js, Zustand
   - Backend: Node.js, Express.js, FastAPI, RESTful APIs, WebSockets, Server-Sent Events (SSE)
-  - AI / ML: LangGraph, LiteLLM, RAG (BM25/TF-IDF/Vector), TensorFlow, PyTorch, Scikit-Learn, FAISS, Pydantic
+  - AI / ML: LangChain, LangGraph, LangFuse, LiteLLM, RAG (BM25/TF-IDF/Vector), TensorFlow, PyTorch, Scikit-Learn, FAISS, Pydantic
   - Databases: MongoDB, PostgreSQL, Redis, MongoDB Atlas (Vector Search), Pinecone, TimescaleDB
   - Cloud & DevOps: Docker, Docker Compose, GKE, AWS (Bedrock, EKS), CI/CD, Kafka, Celery
   - Security: OAuth 2.0, JWT, RBAC, Token Encryption, SSO

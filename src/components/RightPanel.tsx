@@ -1,14 +1,13 @@
 import React from 'react';
 import { Briefcase, Code, Layers, Brain, Sparkles, ChevronRight, ShieldCheck, Cloud, Terminal } from 'lucide-react';
 import { JOURNEY_METRICS, SPECIALTIES, CURRENTLY_BUILDING, RECENT_HIGHLIGHTS } from '../data/portfolioData';
-import { soundManager } from '../utils/soundEffects';
 
 interface RightPanelProps {
   onOpenProject?: (projectId: string) => void;
   onExploreSpecialty?: (specialty: string) => void;
 }
 
-export const RightPanel: React.FC<RightPanelProps> = ({ onOpenProject }) => {
+export const RightPanel: React.FC<RightPanelProps> = () => {
   const getMetricIcon = (name: string) => {
     switch (name) {
       case 'Briefcase':
@@ -89,12 +88,8 @@ export const RightPanel: React.FC<RightPanelProps> = ({ onOpenProject }) => {
       </div>
 
       <div 
-        onClick={() => {
-          soundManager.playSelect();
-          onOpenProject?.('proj-1');
-        }}
         id="currently-building-card"
-        className="group bg-[#F4E9D5] dark:bg-[#081B30] hover:bg-[#EADBC3] dark:hover:bg-[#0B2542] p-3 sm:p-3.5 rounded-xl border border-[#C8B79D] dark:border-[#13355A] dark:hover:border-[#00E5FF]/60 shadow-xs flex items-center gap-3 cursor-pointer transition-all duration-150"
+        className="group bg-[#F4E9D5] dark:bg-[#081B30] hover:bg-[#EADBC3] dark:hover:bg-[#0B2542] p-3 sm:p-3.5 rounded-xl border border-[#C8B79D] dark:border-[#13355A] hover:border-[#092A4A]/50 dark:hover:border-[#00E5FF]/60 shadow-xs flex items-center gap-3 cursor-default transition-all duration-150"
       >
         <div className="w-10 h-10 rounded-lg bg-[#092A4A] dark:bg-[#0A223C] text-[#F4E9D5] dark:text-[#00E5FF] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform border border-transparent dark:border-[#00E5FF]/30">
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

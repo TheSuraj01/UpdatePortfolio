@@ -51,7 +51,7 @@ export const TECH_STACK: TechStackItem[] = [
     category: 'backend',
     iconKey: 'brain',
     proficiency: 88,
-    description: 'LangGraph, LiteLLM, RAG (BM25/TF-IDF/Vector), TensorFlow, PyTorch, Scikit-Learn, FAISS, Pydantic',
+    description: 'LangChain, LangGraph, LangFuse, LiteLLM, RAG (BM25/TF-IDF/Vector), TensorFlow, PyTorch, Scikit-Learn, FAISS, Pydantic',
   },
   {
     id: 'database',
