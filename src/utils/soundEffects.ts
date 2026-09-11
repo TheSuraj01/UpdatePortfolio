@@ -1,8 +1,3 @@
-/**
- * Web Audio API based 8-bit retro sound synthesizer
- * Zero external audio assets required; runs seamlessly in browser.
- */
-
 let audioCtx: AudioContext | null = null;
 let isMuted = false;
 
@@ -44,7 +39,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // Menu navigation blip
   playNavigate: () => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -64,7 +58,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // 'A' button / Select chime
   playSelect: () => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -74,10 +67,10 @@ export const soundManager = {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.type = 'triangle';
-      osc.frequency.setValueAtTime(523.25, now); // C5
-      osc.frequency.setValueAtTime(659.25, now + 0.06); // E5
-      osc.frequency.setValueAtTime(783.99, now + 0.12); // G5
-      osc.frequency.setValueAtTime(1046.5, now + 0.18); // C6
+      osc.frequency.setValueAtTime(523.25, now);
+      osc.frequency.setValueAtTime(659.25, now + 0.06);
+      osc.frequency.setValueAtTime(783.99, now + 0.12);
+      osc.frequency.setValueAtTime(1046.5, now + 0.18);
       gain.gain.setValueAtTime(0.05, now);
       gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
       osc.connect(gain);
@@ -87,7 +80,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // 'B' button / Back sound
   playBack: () => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -108,7 +100,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // Jump sound
   playJump: () => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -129,7 +120,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // Coin / Gem collected sound
   playCoin: () => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -139,8 +129,8 @@ export const soundManager = {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.type = 'sine';
-      osc.frequency.setValueAtTime(987.77, now); // B5
-      osc.frequency.setValueAtTime(1318.51, now + 0.08); // E6
+      osc.frequency.setValueAtTime(987.77, now);
+      osc.frequency.setValueAtTime(1318.51, now + 0.08);
       gain.gain.setValueAtTime(0.05, now);
       gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
       osc.connect(gain);
@@ -150,7 +140,6 @@ export const soundManager = {
     } catch {}
   },
 
-  // Success fanfare (transmission sent)
   playSuccess: () => {
     if (isMuted) return;
     const ctx = getAudioContext();

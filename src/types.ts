@@ -5,7 +5,7 @@ export interface TechStackItem {
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'devops' | 'ai';
   iconKey: string;
-  proficiency: number; // 0-100
+  proficiency: number;
   description: string;
 }
 

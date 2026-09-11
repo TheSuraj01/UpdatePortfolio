@@ -17,7 +17,6 @@ interface GameScreenProps {
 }
 
 export const GameScreen: React.FC<GameScreenProps> = ({
-  activeSection,
   selectedMenuIndex,
   onSelectIndex,
   onConfirmMenu,
@@ -63,15 +62,12 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       }}
       className="select-none"
     >
-      {/* Sky gradient */}
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #0C223E, #153960, #1E4C7B)', pointerEvents: 'none' }} />
 
-      {/* Stars */}
       {[[10, 4, false], [36, 8, false], [64, 5, false], [72, 10, true]].map(([l, t, right], i) => (
         <div key={i} style={{ position: 'absolute', top: `${t}px`, [right ? 'right' : 'left']: `${l}px`, width: 4, height: 4, background: 'rgba(255,255,255,0.6)', pointerEvents: 'none' }} />
       ))}
 
-      {/* Mountains SVG */}
       <svg style={{ position: 'absolute', bottom: 32, left: 0, right: 0, width: '100%', height: 160, pointerEvents: 'none' }} viewBox="0 0 320 160" preserveAspectRatio="none" fill="none">
         <g opacity="0.4">
           <polygon points="10,160 55,45 110,160" fill="#1C3F65" />
@@ -91,7 +87,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         <polygon points="0,160 0,115 6,112 12,116 18,111 24,115 30,110 36,114 42,109 48,115 54,111 60,116 66,110 72,115 78,112 84,117 90,111 96,116 102,110 108,115 114,112 120,117 126,110 132,116 138,111 144,117 150,110 156,116 162,112 168,118 174,111 180,117 186,110 192,116 198,112 204,117 210,110 216,116 222,111 228,117 234,112 240,118 246,111 252,116 258,110 264,117 270,112 276,118 282,111 288,116 294,110 300,117 306,112 312,118 320,113 320,160" fill="#0E2840" />
       </svg>
 
-      {/* Status bar */}
       <div style={{ position: 'relative', zIndex: 30, padding: '10px 14px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 9, color: '#F4E9D5', letterSpacing: '0.1em' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontWeight: 'bold' }}>LV 01</span>
@@ -110,9 +105,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         </div>
       </div>
 
-      {/* Main stage */}
       <div style={{ position: 'relative', flex: 1, overflow: 'hidden', padding: '0 8px' }}>
-        {/* Ground ledge */}
         <div style={{ position: 'absolute', left: 0, bottom: 20, width: '52%', pointerEvents: 'none', zIndex: 10 }}>
           <div style={{ width: '100%', height: 16, background: '#3CA552', borderTop: '2px solid #6EE087' }}>
             <div style={{ position: 'absolute', top: 8, left: 0, right: 0, height: 6, background: '#257336' }} />
@@ -123,7 +116,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </div>
         </div>
 
-        {/* Character */}
         <div style={{
           position: 'absolute',
           left: `${characterX}px`,
@@ -153,7 +145,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </div>
         </div>
 
-        {/* Gems */}
         {mode === 'quest' && [2, 3].map((gemId) => {
           const isCollected = collectedGems.includes(gemId);
           if (isCollected) return null;
@@ -175,7 +166,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           );
         })}
 
-        {/* RPG Menu */}
         {mode === 'menu' && (
           <div style={{ position: 'absolute', top: 28, right: 12, zIndex: 30, minWidth: 130, background: 'rgba(7,25,44,0.94)', border: '2px solid #48A060', borderRadius: 6, padding: 8, boxShadow: '0 6px 16px rgba(0,0,0,0.6)' }}>
             <div style={{ border: '1px solid rgba(72,160,96,0.3)', borderRadius: 4, padding: 4 }}>
@@ -215,7 +205,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         )}
       </div>
 
-      {/* Bottom prompt */}
       <div style={{ position: 'relative', zIndex: 30, padding: '0 12px 8px', display: 'flex', justifyContent: 'center' }}>
         <div style={{ background: 'rgba(5,21,37,0.8)', padding: '2px 10px', borderRadius: 4, border: '1px solid rgba(22,56,91,0.6)', display: 'flex', alignItems: 'center', gap: 6, fontSize: 8.5, color: '#F4E9D5', fontFamily: "'Press Start 2P', monospace" }}>
           {mode === 'menu' ? 'Choose your path...' : 'Explore mode active...'}

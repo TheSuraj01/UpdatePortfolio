@@ -133,10 +133,10 @@ export const RECENT_HIGHLIGHTS = [
 ];
 
 export const CURRENTLY_BUILDING = {
-  title: 'AI Quantitative Stock Intelligence System',
-  subtitle: 'Institutional-grade predictive analytics platform with 100+ technical indicators.',
-  status: 'Active Design',
-  tech: ['Python', 'FastAPI', 'PyTorch', 'Kafka', 'Redis'],
+  title: 'DocRAG',
+  subtitle: 'Smart document retrieval system using RAG and AI-powered search.',
+  status: 'Active Development',
+  tech: ['Python', 'FastAPI', 'LangGraph', 'MongoDB', 'Redis']
 };
 
 export const PROJECTS: Project[] = [

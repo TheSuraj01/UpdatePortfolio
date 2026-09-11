@@ -149,6 +149,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onSelectSection }
           </button>
 
           <button
+            id="theme-toggle-btn"
             onClick={handleToggleTheme}
             title={isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
             className="w-8 h-8 flex items-center justify-center text-[#092A4A] dark:text-[#00E5FF] hover:bg-[#092A4A]/10 dark:hover:bg-[#00E5FF]/10 rounded-full transition-colors cursor-pointer"
